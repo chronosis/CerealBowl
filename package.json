@@ -1,0 +1,41 @@
+{
+  "name": "jdeserialize",
+  "version": "1.0.0",
+  "description": "A library to deserialize Java Object Streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chronosis/jdeserialize.git"
+  },
+  "keywords": [
+    "deserialize",
+    "deserialization",
+    "java",
+    "object",
+    "serialize",
+    "serialization"
+  ],
+  "author": "Jay Reardon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chronosis/jdeserialize/issues"
+  },
+  "homepage": "https://github.com/chronosis/jdeserialize#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-mocha": "^4.3.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "unit.js": "^2.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "long": "^3.2.0"
+  }
+}
