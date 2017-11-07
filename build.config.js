@@ -1,6 +1,6 @@
 module.exports = {
   'main': 'index.js',
-  'devFolder': 'app/',
+  'devFolder': 'lib/',
   'configFolder': 'config/',
   'docsFolder': 'docs/'
 };
