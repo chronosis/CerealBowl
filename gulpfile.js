@@ -10,6 +10,7 @@ const
 
 const devFolder         = config.devFolder;
 const configFolder      = config.configFolder;
+const docsFolder        = config.docsFolder;
 
 // Route Errors to the Notificication Tray
 let onError = (err) => {
