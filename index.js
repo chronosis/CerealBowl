@@ -7,7 +7,8 @@ const
 
 // NOTE: Java uses BigEndian storage (as does most modern microprocessors)
 class JDeserialize {
-  constructor() {
+  constructor(log) {
+    this.log = log || null;
   }
 
   read(buff) {
@@ -16,7 +17,7 @@ class JDeserialize {
       if (!(buff instanceof Buffer)) {
         this._reportError(errors.BUFFER_REQUIRED);
       } else {
-        let objStream = new JObjStream(buff);
+        let objStream = new JObjStream(buff, this.log);
         obj = objStream._read();
       }
     } catch(err) {
