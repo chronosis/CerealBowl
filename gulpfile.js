@@ -14,8 +14,8 @@ const configFolder      = config.configFolder;
 // Route Errors to the Notificication Tray
 let onError = (err) => {
   notify.onError({
-    title:    "Error",
-    message:  "<%= error %>",
+    title:    'Error',
+    message:  '<%= error %>',
   })(err);
   this.emit('end');
 };
@@ -37,7 +37,7 @@ gulp.task('test', ['lint'], () => {
     .pipe(mocha())
     .once('error', function() {
       process.exit(1);
-    })
+    });
 });
 
 gulp.task('default', ['test']);
