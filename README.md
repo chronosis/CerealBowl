@@ -27,5 +27,5 @@ $ npm install jdeserialize
 
 ## API
 
-### .read(buf)
-Reads the contents of the Buffer `buf` and creates an JavaScript Object
+### .read(buff)
+Reads the contents of the Buffer `buff` and creates an JavaScript Object
