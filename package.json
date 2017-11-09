@@ -27,6 +27,7 @@
   "homepage": "https://github.com/chronosis/jdeserialize#readme",
   "devDependencies": {
     "codacy-coverage": "^2.0.3",
+    "eslint": "^4.10.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.0",
     "gulp-mocha": "^4.3.1",

@@ -25,10 +25,10 @@ let plumberOptions = {
   errorHandler: onError,
 };
 
-// Lint JS/JSX Files (For Express)
+// Lint JS Files
 gulp.task('lint', () => {
   return gulp.src(devFolder + '/**/*.js')
-    .pipe(eslint({ configFile: 'eslint.json'}))
+    .pipe(eslint({ configFile: '.eslintrc.json'}))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
@@ -40,5 +40,12 @@ gulp.task('test', ['lint'], () => {
       process.exit(1);
     });
 });
+
+gulp.task('lintfix', () => {
+  return gulp.src(devFolder + '/**/*.js')
+    .pipe(eslint({ configFile: '.eslintrc.json', fix: true}))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+})
 
 gulp.task('default', ['test']);
