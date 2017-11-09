@@ -28,13 +28,13 @@ let plumberOptions = {
 // Lint JS Files
 gulp.task('lint', () => {
   return gulp.src(devFolder + '/**/*.js')
-    .pipe(eslint({ configFile: '.eslintrc.json'}))
+    .pipe(eslint({ configFile: '.eslintrc.json' }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
 gulp.task('test', ['lint'], () => {
-  return gulp.src('test.js', {read: false})
+  return gulp.src('test.js', { read: fals e})
     .pipe(mocha())
     .once('error', function() {
       process.exit(1);
@@ -43,7 +43,7 @@ gulp.task('test', ['lint'], () => {
 
 gulp.task('lintfix', () => {
   return gulp.src(devFolder + '/**/*.js')
-    .pipe(eslint({ configFile: '.eslintrc.json', fix: true}))
+    .pipe(eslint({ configFile: '.eslintrc.json', fix: true }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
