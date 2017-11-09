@@ -46,6 +46,6 @@ gulp.task('lintfix', () => {
     .pipe(eslint({ configFile: '.eslintrc.json', fix: true}))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-})
+});
 
 gulp.task('default', ['test']);
