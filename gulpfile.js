@@ -34,7 +34,7 @@ gulp.task('lint', () => {
 });
 
 gulp.task('test', ['lint'], () => {
-  return gulp.src('test.js', { read: fals e})
+  return gulp.src('test.js', { read: false })
     .pipe(mocha())
     .once('error', function() {
       process.exit(1);

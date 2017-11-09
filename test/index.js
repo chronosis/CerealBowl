@@ -8,12 +8,12 @@ describe('jdeserialize', () => {
   ];
 
   const JDeserialize = require('../');
-  let deserializer = new JDeserialize();
+  const deserializer = new JDeserialize();
   let loadedData;
 
   it('load', () => {
-    let MyModule = require('../');
-    let myClass = new MyModule();
+    const MyModule = require('../');
+    const myClass = new MyModule();
 
     test.assert(myClass instanceof JDeserialize);
   });
