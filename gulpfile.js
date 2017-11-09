@@ -1,19 +1,16 @@
-const
-  fs          = require('fs')
-  , gulp        = require('gulp')
-  , notify      = require('gulp-notify')        // Provide Gulp with a way to create push notifications
-  , plumber     = require('gulp-plumber')       // Handle Errors without breaking
-  , eslint      = require('gulp-eslint')        // ES6 JS/JSX Lineter -- Check for syntax errors
-  , mocha       = require('gulp-mocha')         // Test Framework
-  , config      = require('./build.config')
-;
+const gulp = require('gulp');
+const notify = require('gulp-notify');        // Provide Gulp with a way to create push notifications
+const plumber = require('gulp-plumber');      // Handle Errors without breaking
+const eslint = require('gulp-eslint');        // ES6 JS/JSX Lineter -- Check for syntax errors
+const mocha = require('gulp-mocha');          // Test Framework
+const config = require('./build.config');
 
-const devFolder         = config.devFolder;
-const configFolder      = config.configFolder;
-const docsFolder        = config.docsFolder;
+const devFolder = config.devFolder;
+const configFolder = config.configFolder;
+const docsFolder = config.docsFolder;
 
 // Route Errors to the Notificication Tray
-let onError = (err) => {
+const onError = (err) => {
   notify.onError({
     title:    'Error',
     message:  '<%= error %>',
@@ -21,8 +18,8 @@ let onError = (err) => {
   this.emit('end');
 };
 
-let plumberOptions = {
-  errorHandler: onError,
+const plumberOptions = {
+  errorHandler: onError
 };
 
 // Lint JS Files
