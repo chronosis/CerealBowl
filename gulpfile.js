@@ -3,33 +3,56 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 // Test Framework
 const mocha = require('gulp-mocha');
+// Prettifying
+const prettier = require('gulp-prettier');
+
 const config = require('./build.config');
+const prettyConf = require('./.prettierrc.json');
 
 const devFolder = config.devFolder;
-// const configFolder = config.configFolder;
-// const docsFolder = config.docsFolder;
+const testFolder = config.testFolder;
 
-// Lint JS Files
+const allJSFiles = [
+  '*.js',
+  `${testFolder}/**/*.js`,
+  `${testFolder}/*.js`,
+  `${devFolder}/**/*.js`,
+  `${devFolder}/*.js`
+];
+
+const esLintOpts = { configFile: '.eslintrc.json', fix: true };
+
+// Lint JS/JSX Files (For Express)
 gulp.task('lint', () => {
-  return gulp.src(`${devFolder}/**/*.js`)
+  return gulp
+    .src(allJSFiles)
     .pipe(eslint({ configFile: '.eslintrc.json' }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
 gulp.task('test', ['lint'], () => {
-  return gulp.src('test.js', { read: false })
-    .pipe(mocha())
+  return gulp.src('test/index.js', { read: false }).pipe(mocha())
     .once('error', () => {
       process.exit(1);
     });
 });
 
-gulp.task('lintfix', () => {
-  return gulp.src(`${devFolder}/**/*.js`)
-    .pipe(eslint({ configFile: '.eslintrc.json', fix: true }))
+gulp.task('fix', () => {
+  return gulp.src(allJSFiles).pipe(eslint(esLintOpts))
     .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.failAfterError())
+    .pipe(gulp.dest((file) => {
+      return file.base;
+    }));
+});
+
+gulp.task('pretty', () => {
+  return gulp.src(allJSFiles).pipe(prettier(prettyConf))
+    .pipe(eslint(esLintOpts))
+    .pipe(gulp.dest((file) => {
+      return file.base;
+    }));
 });
 
 gulp.task('default', ['test']);

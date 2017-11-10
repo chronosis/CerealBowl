@@ -2,7 +2,6 @@
 const errors = require('./lib/errors');
 const JObjStream = require('./lib/jObjStream');
 
-
 class JDeserialize {
   constructor(log) {
     this.log = log || null;

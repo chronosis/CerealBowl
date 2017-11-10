@@ -22,5 +22,4 @@ describe('jdeserialize', () => {
     loadedData = deserializer.read(Buffer.from(testData[2], 'hex'));
     test.assert(Array.isArray(loadedData));
   });
-
 });
