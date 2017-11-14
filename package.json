@@ -39,7 +39,8 @@
     "gulp-plumber": "^1.1.0",
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
-    "unit.js": "^2.0.0"
+    "unit.js": "^2.0.0",
+    "winston": "^2.4.0"
   },
   "dependencies": {
     "lodash": "^4.17.4",
