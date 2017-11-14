@@ -3,11 +3,8 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 // Test Framework
 const mocha = require('gulp-mocha');
-// Prettifying
-const prettier = require('gulp-prettier');
 
 const config = require('./build.config');
-const prettyConf = require('./.prettierrc.json');
 
 const devFolder = config.devFolder;
 const testFolder = config.testFolder;
@@ -42,14 +39,6 @@ gulp.task('fix', () => {
   return gulp.src(allJSFiles).pipe(eslint(esLintOpts))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
-    .pipe(gulp.dest((file) => {
-      return file.base;
-    }));
-});
-
-gulp.task('pretty', () => {
-  return gulp.src(allJSFiles).pipe(prettier(prettyConf))
-    .pipe(eslint(esLintOpts))
     .pipe(gulp.dest((file) => {
       return file.base;
     }));
