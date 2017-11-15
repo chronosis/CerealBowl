@@ -18,6 +18,16 @@ describe('jdeserialize', () => {
     test.assert(myClass instanceof JDeserialize);
   });
 
+  it('Load Test Data 1', () => {
+    loadedData = deserializer.read(Buffer.from(testData[0], 'hex'));
+    test.assert(Array.isArray(loadedData));
+  });
+
+  it('Load Test Data 2', () => {
+    loadedData = deserializer.read(Buffer.from(testData[1], 'hex'));
+    test.assert(Array.isArray(loadedData));
+  });
+
   it('Load Test Data 3', () => {
     loadedData = deserializer.read(Buffer.from(testData[2], 'hex'));
     test.assert(Array.isArray(loadedData));
