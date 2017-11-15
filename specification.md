@@ -131,9 +131,8 @@ classdata:
 
 nowrclass:
   values                    // fields in order of class descriptor
-
-values:          // The size and types are described by the
-                 // classDesc for the current object
+                            // The size and types are described by the
+                            // classDesc for the current object
 
 wrclass:
   nowrclass
