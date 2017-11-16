@@ -1,10 +1,15 @@
 {
   "name": "jdeserialize",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A library to deserialize Java Object Streams",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "build": "gulp",
+    "fix": "gulp fix",
+    "lint": "gulp lint",
+    "coverage": "nyc --reporter=lcov mocha && cat ./coverage/lcov.info | codacy-coverage",
+    "pretty": "gulp pretty"
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,8 @@
   },
   "homepage": "https://github.com/chronosis/jdeserialize#readme",
   "devDependencies": {
+    "codacy-coverage": "^2.0.3",
+    "eslint": "^4.10.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.0",
     "gulp-mocha": "^4.3.1",
@@ -32,7 +39,8 @@
     "gulp-plumber": "^1.1.0",
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
-    "unit.js": "^2.0.0"
+    "unit.js": "^2.0.0",
+    "winston": "^2.4.0"
   },
   "dependencies": {
     "lodash": "^4.17.4",

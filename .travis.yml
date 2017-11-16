@@ -1,9 +1,14 @@
 language: node_js
 node_js:
-  - "node"
+- node
 before_script:
-  - npm install -g gulp-cli
-script: gulp
+- npm install -g gulp-cli
+script:
+- gulp
+- npm run coverage
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+env:
+  global:
+    secure: KZelEVECpiOJRJ1H/4M0VvNMIO5IQssw8JjSArS/Op80ihrNZs3waVI7infa+DC9h6CPlxLTDckdSzcwSUonejxrw8PYYshhzVU0X5YGs3VIiBJqKQ76ScSZND7ZcB9gMqQ+3keOwOW+HUTtvAscCfft13YZBnxJZEtP+UixuyNBDCIVuVklBCjAXAHg5g6ArdI8fU8J9tJCHGwTyhJJAzhnc7L9ucyT6E1OD98ISGQ/HBVHpp/yAQoGMOPv24SIgjSaofFIKjFOC4TMiFSh6qrX70MaQEeRxmPLsu9NANNXdbPssvFfZ0JEff0yb/glj6TaMnM3RYT4fQV4jQbeHyG63ECkC0tHDX1fisBU1lC3ug+a20ZXJHrrJQrICH1YuGecUxvFY0aHTj5miAEpc7WsSlChE3ONvmXLW8E3KZXOCxXzlShjN+SdY/GFOawSDmHB8OrCz6GYurhJ8CG0QG9KRi0w/bdfePRoDTXlYWYtJh+LSF1BUbtOU6QooFOyHDHh7nP7sO+ANaGmQNo6y7jXluNCTDz/XT+yMypJt5ZFCWjGheM7XdZD3z+V8msnrD2/WFEhSMP73JLDJF6ebjbn8a5Ixg70n8bmKFrec/x1WNe0bs4uF57KHkE3ApYU7fgv9k0haP3EQ2f0Id6VlXBOfX/Kc2JGo43NaRjpad0=
