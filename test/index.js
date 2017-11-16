@@ -33,4 +33,9 @@ describe('jdeserialize', () => {
     loadedData = deserializer.read(Buffer.from(testData[2], 'hex'));
     test.assert(Array.isArray(loadedData));
   });
+
+  it('Load Test Data Set 4', () => {
+    //loadedData = deserializer.read(Buffer.from(testData[3], 'hex'));
+    //test.assert(Array.isArray(loadedData));
+  });
 });
