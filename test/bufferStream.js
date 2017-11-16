@@ -92,7 +92,7 @@ describe('bufferStream', () => {
     try {
       bstream.get8();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -101,7 +101,7 @@ describe('bufferStream', () => {
     try {
       bstream.get16();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -110,7 +110,7 @@ describe('bufferStream', () => {
     try {
       bstream.get32();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -119,7 +119,7 @@ describe('bufferStream', () => {
     try {
       bstream.get32();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -128,7 +128,7 @@ describe('bufferStream', () => {
     try {
       bstream.get64();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -137,7 +137,7 @@ describe('bufferStream', () => {
     try {
       bstream.getBool();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -146,7 +146,7 @@ describe('bufferStream', () => {
     try {
       bstream.getFloat();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
@@ -155,14 +155,14 @@ describe('bufferStream', () => {
     try {
       bstream.getDouble();
       test.assert(false);
-    } catch(err) {
+    } catch (err) {
       test.assert(true);
     }
   });
 
   it('check bad buffer', () => {
     try {
-      const bstr = new BufferStream('');
+      new BufferStream('');
       test.assert(false);
     } catch (err) {
       test.assert(true);
