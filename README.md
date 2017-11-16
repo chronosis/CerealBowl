@@ -8,6 +8,7 @@
 [![Package Quality](http://npm.packagequality.com/shield/jdeserialize.svg)](http://packagequality.com/#?package=jdeserialize)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/88cafbb608b1497cbb685fd1f4f9b05e)](https://www.codacy.com/app/chronosis/jdeserialize?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=chronosis/jdeserialize&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/88cafbb608b1497cbb685fd1f4f9b05e)](https://www.codacy.com/app/chronosis/jdeserialize?utm_source=github.com&utm_medium=referral&utm_content=chronosis/jdeserialize&utm_campaign=Badge_Coverage)
+[![Dependencies badge](https://david-dm.org/chronosis/jdeserialize/status.svg)](https://david-dm.org/chronosis/jdeserialize?view=list)
 
 JDeserialize is a library to deserialize Java Object Streams v2.
 
