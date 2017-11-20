@@ -1,11 +1,11 @@
 // index.js
 const errors = require('./lib/errors');
 const JObjStream = require('./lib/jObjStream');
-const Logger = require('./lib/logstub');
+const LogStub = require('logstub');
 
 class JDeserialize {
   constructor(log) {
-    this.log = log || new Logger();
+    this.log = log || new LogStub();
   }
 
   read(buff) {

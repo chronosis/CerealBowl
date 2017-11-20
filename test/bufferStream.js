@@ -5,7 +5,7 @@ const testBuff = '80' + '0100' + '00010001' + '0000000100010101' + '01' + 'BF800
 const buff = Buffer.from(testBuff, 'hex');
 
 describe('bufferStream', () => {
-  const LogStub = require('../lib/logstub');
+  const LogStub = require('logstub');
   const log = new LogStub();
   const BufferStream = require('../lib/bufferStream');
   const bstream = new BufferStream(buff, log);
